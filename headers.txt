@@ -1,0 +1,9 @@
+Request Headers:
+- accept: Indicates the client expects a JSON response.
+- user-agent: Identifies Postman as the client making the request.
+
+Response Headers:
+- content-type: Indicates the response body format (application/json).
+- cache-control: Controls caching behavior of the response.
+- date: Timestamp of when the response was generated.
+- server: Identifies the server handling the request.

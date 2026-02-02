@@ -18,7 +18,7 @@ You will create a Postman collection and create a REST test within the project. 
         - validating books returned have the title turing (e.g. items[i].title)
         - Response status code (e.g. 200)
 - Create a Chained request that requests 
-    - Url: https://www.googleapis.com/books/v1/volumes/{{id}} 
+    - Url: https://www.googleapis.com/books/v1/volumes/{{book_id}} 
     - Using the id you stored from the first request, make sure the second request uses the ID pulled from the first request 
     - Create Asserts that:
         - Validate response contains the ID from the request 
@@ -57,12 +57,13 @@ You will create a Postman collection and create a REST test within the project. 
 - Postman: https://www.getpostman.com/
 - Blog: http://blog.getpostman.com/2014/01/27/extracting-data-from-responses-and-chaining-requests/
 
-```
-var issues = JSON.parse(responseBody);  
-var closedState = postman.getEnvironmentVariable("closed_state");  
-var allIssuesAreClosed = issues.every(function(issue) {  
+```js
+var issues = JSON.parse(responseBody);
+var closedState = postman.getEnvironmentVariable("closed_state");
+var allIssuesAreClosed = issues.every(function(issue) {
   return issue.state === closedState;
 });
-tests["All issues are closed"] = allIssuesAreClosed;  
+tests["All issues are closed"] = allIssuesAreClosed;
+  
 ```
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/35315-d80d079c-5158-4969-bf67-90dd80aa1dc4?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D35315-d80d079c-5158-4969-bf67-90dd80aa1dc4%26entityType%3Dcollection%26workspaceId%3D9537543c-3737-4557-a3ce-8c5ed9249378#?env%5Bmccarthy-hw0%5D=W3sia2V5IjoiYm9va19pZCIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImFueSIsInNlc3Npb25WYWx1ZSI6IjRQWjZEQUFBUUJBSiIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiNFBaNkRBQUFRQkFKIiwic2Vzc2lvbkluZGV4IjowfV0=)
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://yanethles-4332651.postman.co/workspace/leslie's-Team's-Workspace~92e68228-6cfd-47db-814c-a7550f24975e/collection/51909930-ad6e3e67-7d5e-4516-bef2-aaef96d4fd5f?action=share&creator=51909930&active-environment=51909930-ba269055-ad00-44d8-839f-91093d72395d)
