@@ -67,3 +67,25 @@ tests["All issues are closed"] = allIssuesAreClosed;
   
 ```
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://yanethles-4332651.postman.co/workspace/leslie's-Team's-Workspace~92e68228-6cfd-47db-814c-a7550f24975e/collection/51909930-ad6e3e67-7d5e-4516-bef2-aaef96d4fd5f?action=share&creator=51909930&active-environment=51909930-ba269055-ad00-44d8-839f-91093d72395d)
+
+# CSCI 3916 – Assignment 1
+
+## Echo Server
+This project implements a simple Echo server using Node.js and Express.
+The server responds with the same string it receives in a POST request.
+
+## Deployment
+The server is deployed on Render at:
+https://assignment1-4q27.onrender.com
+
+## Postman Testing
+A Postman collection was created to test the deployed server.
+
+### Tests Included
+- Status code is 200
+- Response time is less than 200ms
+- Response body matches the request body
+
+### Environment Variables
+The following Postman environment variable was used:
+- `echo_body`: the text sent in the POST request body
